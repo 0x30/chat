@@ -1,3 +1,16 @@
 html {
-  font-size: 12px;
+  font-size: 16px;
+  min-height: 100%;
+}
+
+* {
+  flex-shrink: 0;
+}
+
+html,
+body,
+#app {
+  display: flex;
+  flex-direction: column;
+  background-color: red($color: #000000);
 }
