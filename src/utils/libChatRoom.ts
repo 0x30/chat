@@ -4,7 +4,7 @@ import { messagesSubject } from "./imMessages";
 
 export const joinChatRoom = async (id: string) => {
   const chatRoom = im.ChatRoom.get({ id });
-  await chatRoom.join({ count: 1 });
+  await chatRoom.join({ count: 30 });
   return chatRoom;
 };
 
