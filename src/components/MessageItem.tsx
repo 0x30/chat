@@ -4,7 +4,15 @@ import Style from "./MessageItem.module.scss";
 
 const MessageBasicItem = defineComponent((_, { slots }) => {
   return () => {
-    return <div class={Style.basicItem}>{slots.default!()}</div>;
+    return (
+      <div class={Style.basicItem}>
+        <img
+          class={Style.headPhoto}
+          src="http://pic.962.net/up/2020-2/15816677587259703.jpg"
+        />
+        {slots.default!()}
+      </div>
+    );
   };
 });
 
@@ -19,7 +27,7 @@ const TextMessageItem = defineComponent({
     return () => {
       return (
         <MessageBasicItem>
-          <span>{(props.message.content as any).content}</span>
+          <span class={Style.textContent}>{(props.message.content as any).content}</span>
         </MessageBasicItem>
       );
     };
