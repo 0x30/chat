@@ -1,8 +1,8 @@
 import { messagesSubject } from "@/utils/imMessages";
-import { IReceivedMessageV3 } from "@rongcloud/imlib-v4";
 import { defineComponent, ref } from "vue";
 import Style from "./MessagesView.module.scss";
 import MessageItem from "./MessageItem";
+import { IReceivedMessageV3 } from "@/utils/imType";
 
 export default defineComponent(() => {
   const messagesRef = ref<IReceivedMessageV3[]>([]);

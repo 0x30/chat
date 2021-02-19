@@ -1,4 +1,5 @@
-import { IReceivedMessageV3, MESSAGE_TYPE } from "@rongcloud/imlib-v4";
+import { IReceivedMessageV3 } from "@/utils/imType";
+import { MESSAGE_TYPE } from "@rongcloud/imlib-v4";
 import { defineComponent, PropType } from "vue";
 import Style from "./MessageItem.module.scss";
 
@@ -27,7 +28,9 @@ const TextMessageItem = defineComponent({
     return () => {
       return (
         <MessageBasicItem>
-          <span class={Style.textContent}>{(props.message.content as any).content}</span>
+          <span class={Style.textContent}>
+            {(props.message.content as any).content}
+          </span>
         </MessageBasicItem>
       );
     };

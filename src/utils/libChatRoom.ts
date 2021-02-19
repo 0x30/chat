@@ -1,6 +1,7 @@
 import { im } from "./im";
-import { Chatroom, MESSAGE_TYPE } from "@rongcloud/imlib-v4";
+import { MESSAGE_TYPE } from "@rongcloud/imlib-v4";
 import { messagesSubject } from "./imMessages";
+import { Chatroom } from "./imType";
 
 export const joinChatRoom = async (id: string) => {
   const chatRoom = im.ChatRoom.get({ id });

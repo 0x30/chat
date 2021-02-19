@@ -1,9 +1,9 @@
 import { StatusView } from "@/components/StatusView";
 import { joinChatRoom, sendTextMsg } from "@/utils/libChatRoom";
-import { Chatroom, IReceivedMessageV3 } from "@rongcloud/imlib-v4";
 import { defineComponent, onMounted, ref } from "vue";
 import Style from "./HomeView.module.scss";
 import MessagesView from "../components/MessagesView";
+import { Chatroom } from "@/utils/imType";
 
 export default defineComponent(() => {
   const chatRoom = ref<Chatroom>();
